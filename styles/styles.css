@@ -122,13 +122,27 @@ section{
     article{
         display:grid;
         grid-template-columns:1fr 1fr 1fr; /* repeat(3, 1fr) */
+        /* grid-template-areas assigns a map, into which you can assign the positions of elements */
+        grid-template-areas:
+            "header header side"
+            "content content side";
     }
 
-    h2, section:first-of-type{
-       grid-column: 1 / span 2; /* start at column 1 and take up 2 columns */ 
+    h2{
+        grid-area: header;
     }
-
+    section:first-of-type{
+        grid-area: content;
+    }
     section:last-of-type{
-        grid-row: 1 / span 2; /* start at row 1 and span 2 rows */
+        grid-area: side;
     }
+    /*h2, section:first-of-type{
+       grid-column: 1 / span 2;  start at column 1 and take up 2 columns 
+    }*/ 
+
+    /* section:last-of-type{
+        grid-column: 3;
+        grid-row: 1 / span 2; start at row 1 and span 2 rows 
+    }*/
 }
