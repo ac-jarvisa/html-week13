@@ -71,8 +71,16 @@ li{
     border-right:2px solid black; /* border sits in between padding and margin - you always need three
     properties: size, style, and colour */
     background-color:grey;
+    /* to center the content, just use text-align */
+    text-align:center;
+
     /* list items become flex items because the ul is set to display:flex */
     flex-grow:1;
+
+    /* flex-basis:0 says to ignore the size of the content and give each item equal weight */
+    flex-basis:0;
+
+    font-size:24px;
 }
 
 /* target the last list item using a pseudo class to remove the border */
@@ -82,6 +90,8 @@ li:last-child{
 
 a{
     background-color:orange;
+    /* remove underline from links with text-decoration */
+    text-decoration:none;
 }
 
 
