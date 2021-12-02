@@ -94,6 +94,20 @@ a{
     text-decoration:none;
 }
 
+h2{
+    font-size:32px;
+    font-weight:bold;
+    padding:10px;
+    margin-bottom:10px;
+    background-color:deepskyblue;
+}
+
+section{
+    padding:10px;
+    margin:5px 0;
+    background-color:gainsboro;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Desktop Styling
@@ -103,5 +117,18 @@ a{
         margin:0 auto; /* margin of 0 on the top and bottom and "automatic" on the left and right */
         width:80%;
         max-width:1260px;
+    }
+
+    article{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr; /* repeat(3, 1fr) */
+    }
+
+    h2, section:first-of-type{
+       grid-column: 1 / span 2; /* start at column 1 and take up 2 columns */ 
+    }
+
+    section:last-of-type{
+        grid-row: 1 / span 2; /* start at row 1 and span 2 rows */
     }
 }
