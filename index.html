@@ -25,6 +25,41 @@
                 </ul>
             </nav>
         </header>
+
+        <main>
+
+            <!--
+                forms require two attributes:
+                action is where the form information will be submitted to
+                method is how that information is submitted
+                    "get" method is unencrypted
+                    "post" method is encrytped
+            -->
+            <form action="index.html" method="post">
+                <!-- labels require one attribute, "for", which needs to match the ID of the form field -->
+                <label for="fullname">Enter your name:</label>
+                <!-- form fields require two attributes: ID (to match the label) and name (which is how
+                    the information is processed on the server) -->
+                <input type="text" id="fullname" name="fullname">
+
+                <label for="info">Enter lots of info:</label>
+                <textarea id="info" name="info"></textarea>
+
+                <div>Radio buttons:</div>
+                <!-- with radio buttons, the name makes them a set - each radio button needs the same name -->
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="yesorno">
+                <label for="no">No</label>
+                <input type="radio" id="no" name="yesorno">
+
+                <!-- there are two types of submit buttons 
+                    input type="submit" - use the value attribute to add content
+                    button type="submit" - content goes between the tags
+                -->
+                <input type="submit" value="submit">
+                <button type="submit"><i class="icon icon-zoom"></i></button>
+            </form>
+        </main>
     </div>
 </body>
 </html>
