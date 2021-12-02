@@ -57,12 +57,41 @@ table {
     height:100vh; /* 100 viewport height */
 }
 
+ul{
+    background-color:purple;
+    display:flex;
+    /* justify-content: flex-end; - this will align the content to the right (or the end of the flex direction) */
+    /* justify-content:space-evenly; - or space-around or space-between will apply a slightly different layout
+    in spacing the content across the enire flexed item */
+}
+
+li{
+    /* margin:10px;  margin is space around an object - it pushes other objects away */
+    padding:10px; /* padding is space inside an object - it pushes content away from the edge */
+    border-right:2px solid black; /* border sits in between padding and margin - you always need three
+    properties: size, style, and colour */
+    background-color:grey;
+    /* list items become flex items because the ul is set to display:flex */
+    flex-grow:1;
+}
+
+/* target the last list item using a pseudo class to remove the border */
+li:last-child{
+    border:none;
+}
+
+a{
+    background-color:orange;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Desktop Styling
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (min-width:960px){
     .container{
+        margin:0 auto; /* margin of 0 on the top and bottom and "automatic" on the left and right */
         width:80%;
+        max-width:1260px;
     }
 }
